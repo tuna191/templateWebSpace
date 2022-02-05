@@ -1,0 +1,34 @@
+@import "../../index.scss";
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: var(--ff-subheading-secondary);
+  font-size: 1.6rem;
+  letter-spacing: 0.27rem;
+
+  grid-row: 3;
+  grid-column: 2 / span 10;
+
+  @media (min-width: $bp-tablet) {
+    justify-content: flex-start;
+    font-size: 2rem;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 2.8rem;
+
+    grid-row: 3;
+    grid-column: 2 / span 10;
+  }
+
+  span {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+
+  h2 {
+    font-size: inherit;
+    margin-left: calc(var(--base-unit) * 0.5);
+  }
+}

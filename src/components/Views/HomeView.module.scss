@@ -1,0 +1,122 @@
+@import "../../index.scss";
+
+.home-view {
+  background: bottom/cover no-repeat
+    url("../../assets/home/background-home-mobile.jpg");
+
+  @media (min-width: $bp-tablet) {
+    background: bottom/cover no-repeat
+      url("../../assets/home/background-home-tablet.jpg");
+  }
+
+  @media (min-width: $bp-desktop) {
+    background: bottom/cover no-repeat
+      url("../../assets/home/background-home-desktop.jpg");
+  }
+
+  &__intro {
+    grid-row: 4 / span 3;
+    grid-column: 3 / span 8;
+    @media (min-width: $bp-tablet) {
+      grid-row: 3 / span 4;
+      grid-column: 3 / span 8;
+    }
+
+    @media (min-width: $bp-desktop) {
+      grid-row: 7 / span 6;
+      grid-column: 2 / span 5;
+    }
+  }
+
+  h5 {
+    height: calc(var(--base-unit) * 2);
+    font-family: var(--ff-subheading-secondary);
+    color: var(--clr-secondary);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.27rem;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: $bp-desktop) {
+      font-size: 2.8rem;
+      text-align: left;
+    }
+  }
+
+  h1 {
+    height: calc(var(--base-unit) * 5);
+    font-size: 8rem;
+    font-weight: 400;
+    font-family: var(--ff-heading);
+    text-align: center;
+
+    @media (min-width: $bp-tablet) {
+      height: calc(var(--base-unit) * 7);
+      font-size: 15rem;
+    }
+
+    @media (min-width: $bp-desktop) {
+      text-align: left;
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-row: 7 / span 5;
+    grid-column: 2 / span 10;
+
+    @media (min-width: $bp-desktop) {
+      justify-content: flex-end;
+
+      grid-row: 7 / span 6;
+      grid-column: 7 / span 5;
+    }
+  }
+
+  &__link {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    font-family: var(--ff-heading);
+    font-size: 2rem;
+    color: var(--clr-primary);
+    background: var(--clr-contrast);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0rem solid transparent;
+
+    @media (hover: hover) {
+      transition: var(--hover-transition);
+
+      &:hover {
+        outline: 8rem solid #ffffff1a;
+      }
+    }
+
+    @media (min-width: $bp-tablet) {
+      width: 24rem;
+      height: 24rem;
+      font-size: 3.2rem;
+      margin: calc(var(--base-unit) * 6.5) 0 calc(var(--base-unit) * 3.75);
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 27.4rem;
+      height: 27.4rem;
+      margin: 0;
+    }
+  }
+}

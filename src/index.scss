@@ -1,0 +1,70 @@
+:root {
+  --base-unit: 2.4rem;
+
+  --ff-heading: "Bellefair", serif;
+  --ff-subheading-primary: "Bellefair", serif;
+  --ff-subheading-secondary: "Barlow Condensed", sans-serif;
+  --ff-btn: "Barlow Condensed", sans-serif;
+  --ff-nav: "Barlow Condensed", sans-serif;
+  --ff-body-text: "Barlow", sans-serif;
+
+  --clr-primary: #0b0d17;
+  --clr-secondary: #d0d6f9;
+  --clr-contrast: #ffffff;
+  --clr-stroke: #383b4b;
+  --clr-hover: #979797;
+
+  --hover-transition: all 0.4s ease-in-out;
+}
+// 768 px / 1.6 = 48em
+$bp-tablet: 48em;
+
+// 1440 px / 1.6 = 90em
+$bp-desktop: 90em;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--clr-contrast);
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: var(--ff-body-text);
+  color: var(--clr-secondary);
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

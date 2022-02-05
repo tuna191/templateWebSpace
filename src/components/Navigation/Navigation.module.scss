@@ -1,0 +1,111 @@
+@import "../../index.scss";
+
+%nav-indicator {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 4px;
+    height: calc(var(--base-unit) * 1.25);
+    background: transparent;
+    transition: var(--hover-transition);
+
+    @media (min-width: $bp-tablet) {
+      right: auto;
+      width: 100%;
+      height: 3px;
+      bottom: calc(var(--base-unit) * -1.75);
+    }
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.048);
+  backdrop-filter: blur(2rem);
+
+  width: 25.4rem;
+  height: 100vh;
+  padding-top: calc(var(--base-unit) * 5);
+  padding-left: calc(var(--base-unit) * 1.25);
+
+  @media (min-width: $bp-tablet) {
+    width: 60vw;
+    height: 9.6rem;
+    padding-top: calc(var(--base-unit) * 1.5);
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  @media (min-width: $bp-desktop) {
+    top: 4rem;
+    padding-right: 10vw;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--base-unit) * 1.5);
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    li {
+      position: relative;
+    }
+  }
+
+  &__link {
+    font-family: var(--ff-nav);
+    font-size: 1.6rem;
+    letter-spacing: 0.27rem;
+    text-transform: uppercase;
+    color: var(--clr-contrast);
+    text-decoration: none;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 1.4rem;
+    }
+
+    @media (min-width: $bp-tablet) {
+      font-size: 1.6rem;
+    }
+
+    span {
+      display: inline-block;
+      font-weight: 700;
+      letter-spacing: 0.27rem;
+      width: 1.8rem;
+      margin-right: calc(var(--base-unit) * 0.5);
+    }
+
+    @extend %nav-indicator;
+
+    @media (hover: hover) {
+      &:hover {
+        &::after {
+          background: var(--clr-hover);
+        }
+      }
+    }
+
+    &--active {
+      @extend %nav-indicator;
+
+      display: flex;
+      align-items: center;
+
+      &::after {
+        background: var(--clr-contrast);
+      }
+    }
+  }
+}
