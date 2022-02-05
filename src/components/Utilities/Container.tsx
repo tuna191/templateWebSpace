@@ -6,8 +6,8 @@ type ContainerObj = {
 };
 
 const Container: FC<ContainerObj> = (props) => {
-  const cssStyle = [styles["background-container"], props.className];
-
+  const cssStyle = [styles["background-container"], props.className]; // tách mảng thành 2 chuỗi 
+console.log(cssStyle.join(" "))
   return <div className={cssStyle.join(" ")}>{props.children}</div>;
 };
 

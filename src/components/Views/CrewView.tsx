@@ -30,7 +30,7 @@ const variants = {
   },
 };
 
-const CrewView: FC<{ crewData: CrewData[] }> = (props) => {
+const CrewView: FC<{ crewData: CrewData[] }> = (props) => { // FC la trong typeScript
   const { page } = useContext(PageContext);
   const crewPage = page[0];
   const direction = page[1];

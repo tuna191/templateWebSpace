@@ -9,7 +9,9 @@ const [isLoading, setisLoading] = useState<boolean>(true)
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/data.json')
+      
       const data = await response.json()
+     console.log(data)
       setData(data.destinations)
       setisLoading(false)
     }

@@ -12,6 +12,8 @@ export const PageContext = React.createContext<PageObj>({
 
 const PageContextProvider: FC = (props) => {
   const [[page, direction], setPage] = useState<number[]>([0, 0]);
+console.log(page)
+console.log(direction)
 
   const setPageHandler = (page: number) => {
     setPage((prevPage) => {

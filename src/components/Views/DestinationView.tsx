@@ -9,6 +9,12 @@ import Title from "../Utilities/Title";
 import Button from "../Utilities/Button";
 import Description from "../Utilities/Description";
 
+
+
+
+
+
+
 const variants = {
   enter: (direction: number) => {
     return {
@@ -34,8 +40,9 @@ const DestinationView: FC<{ destinationsData: DestinationsData[] }> = (
   props
 ) => {
   const { page } = useContext(PageContext);
-  const destinationPage = page[0];
-  const direction = page[1];
+  const destinationPage = page[0]; // page in PageContext
+ 
+  const direction = page[1]; // direction in PageContext
 
   const cssBtnStyle = [
     styles["destination-view__btn"],

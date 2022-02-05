@@ -4,9 +4,9 @@ import styles from "./Navigation.module.scss";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { MEDIA_QUERY_TABLET } from "../../config";
 import { MEDIA_QUERY_DESKTOP } from "../../config";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // một thư viện gì đó
 
-type NavObj = {
+type NavObj = { // của typeScript
   showNavigation: boolean;
   closeNavigation: () => void;
 };
